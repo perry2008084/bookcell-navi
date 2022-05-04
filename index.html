@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" href="/favicon.ico?v=1"/>
     <title>书格导航</title>
     <style>
       h2,
@@ -16,12 +17,21 @@
 
       .container {
         width: 90%;
-        margin: 10px auto;
+        margin: 30px auto;
         text-align: left;
+      }
+
+      header {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: dodgerblue;
       }
 
       section {
         margin-bottom: 14px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
       }
 
       h2,
@@ -33,7 +43,10 @@
 
       h2 {
         font-size: 20px;
-        color: black;
+        font-weight: 400;
+        color: #5a8891;
+        line-height: 1.25;
+        flex: 0 0 50px;
       }
 
       ul {
@@ -55,12 +68,20 @@
         color: #eee;
       }
 
+      body.night header {
+        color: #98ccff;
+      }
+
+      body.night h2 {
+        color: #66d1e6;
+      }
+
       body.night a {
-        color: #eee;
+        color: #9fd7e2;
       }
 
       body.night a:visited {
-        color: rgb(85, 17, 211);
+        color: #19a7c3; 
       }
 
       #mode {
@@ -86,6 +107,10 @@
   </head>
 
   <body class="container">
+    <header>
+      书格导航
+    </header>
+
     <section>
       <h2>搜索</h2>
       <ul>
@@ -102,14 +127,18 @@
       <h2>阅读</h2>
       <ul>
         <li><a href="https://r.qq.com/" target="_blank">微信读书</a></li>
-        <li><a href="https://zlibrary.org/" target="_blank">zlibrary</a></li>
+        <li><a href="https://www.dictionary.com" target="_blank">dictionary</a></li>
         <li><a href="https://m.gushiwen.cn/" target="_blank">古诗文</a></li>
+        <li><a href="https://zlibrary.org/" target="_blank">zlibrary</a></li>
+        <li><a href="https://z-epub.com/" target="_blank">zepub</a></li>
+        <li><a href="http://libgen.is/" target="_blank">libgen</a></li>
       </ul>
     </section>
 
     <section>
       <h2>Todo</h2>
       <ul>
+        <li><a href="https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/#" target="_blank">CS</a></li>
         <li>
           <a href="https://github.com/leonardomso/33-js-concepts" target="_blank"
             >33js</a
@@ -152,6 +181,7 @@
       <h2>社区</h2>
       <ul>
         <li><a href="https://www.v2ex.com/" target="_blank">V2ex</a></li>
+        <li><a href="https://wx.zsxq.com" target="_blank">知识星球</a></li>
         <li><a href="https://juejin.cn/frontend" target="_blank">掘金</a></li>
         <li><a href="https://medium.com/" target="_blank">Medium</a></li>
         <li><a href="https://dev.to/" target="_blank">dev.to</a></li>
@@ -180,12 +210,13 @@
     </section>
 
     <section>
-      <h2>新闻</h2>
+      <h2>资讯</h2>
       <ul>
-        <li><a href="https://www.thepaper.cn/" target="_blank">澎湃</a></li>
         <li>
           <a href="https://www.zaobao.com.sg/" target="_blank">联合早报</a>
         </li>
+        <li><a href="https://www.inoreader.com" target="_blank">RSS</a></li>
+        <li><a href="https://www.thepaper.cn/" target="_blank">澎湃</a></li>
         <li>
           <a href="https://www.bbc.com/zhongwen/simp" target="_blank">BBC</a>
         </li>
@@ -205,6 +236,7 @@
       <ul>
         <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
         <li><a href="https://music.youtube.com/" target="_blank">Music</a></li>
+        <li><a href="https://nomadlist.com" target="_blank">RemoteCity</a></li>
         <li><a href="https://pianyuan.org/" target="_blank">Film</a></li>
       </ul>
     </section>

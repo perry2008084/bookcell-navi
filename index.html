@@ -1,435 +1,399 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="title" content="书格导航" />
-    <meta
-      name="description"
-      content="一个极简导航网站，收集一些日常使用的网站"
-    />
-    <link rel="icon" href="/favicon.ico?v=1" />
-    <title>书格导航</title>
-    <style>
-      h2,
-      ul,
-      li,
-      p {
-        margin: 0;
-        padding: 0;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="title" content="书格导航" />
+  <meta name="description" content="一个极简导航网站，收集一些日常使用的网站" />
+  <link rel="icon" href="/favicon.ico?v=1" />
+  <title>书格导航</title>
+  <style>
+    h2,
+    ul,
+    li,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      margin: 30px auto;
+      text-align: left;
+    }
+
+    header {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: dodgerblue;
+    }
+
+    section {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+    h2,
+    ul,
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      color: #5a8891;
+      line-height: 1.25;
+      flex: 0 0 50px;
+    }
+
+    ul {
+      line-height: 1.6;
+    }
+
+    li {
+      margin-left: 4px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    a {
+      font-size: 16px;
+      text-decoration: none;
+      color: #7fdbff;
+    }
+
+    a:visited {
+      color: #0074d9;
+    }
+
+    /* 夜晚模式 */
+    body.night {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #eee;
+    }
+
+    body.night header {
+      color: #98ccff;
+    }
+
+    body.night h2 {
+      color: #66d1e6;
+    }
+
+    body.night a {
+      color: #9fd7e2;
+    }
+
+    body.night a:visited {
+      color: #19a7c3;
+    }
+
+    #mode {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      z-index: 99;
+      border: 1px solid #666;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      font-size: 18px;
+    }
+
+    #mode.night {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #eee;
+    }
+  </style>
+</head>
+
+<body class="container">
+  <header>书格导航</header>
+
+  <section>
+    <h2>搜索</h2>
+    <ul>
+      <li><a href="https://www.google.com/" target="_blank">Google</a></li>
+      <li>
+        <a href="https://duckduckgo.com/" target="_blank">Duckduckgo</a>
+      </li>
+      <li><a href="https://www.bing.com/" target="_blank">Bing</a></li>
+      <li><a href="https://0x3.com/" target="_blank">0x3</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Indiehacker</h2>
+    <ul>
+      <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+      <li>
+        <a href="https://indiehackers.com" target="_blank">indiehackers</a>
+      </li>
+      <li><a href="https://www.producthunt.com/" target="_blank">producthunt</a></li>
+      <li><a href="https://news.ycombinator.com/" target="_blank">hackernews</a></li>
+      <li><a href="https://www.reddit.com/?feed=home" target="_blank">reddit</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>AI</h2>
+    <ul>
+      <li><a href="https://chatgpt.com/" target="_blank">chatgpt</a></li>
+      <li><a href="https://github.com/copilot" target="_blank">copilot</a></li>
+      <li>
+        <a href="https://www.doubao.com/chat/" target="_blank">豆包</a>
+      </li>
+      <li><a href="https://chat.deepseek.com/" target="_blank">Deepseek</a></li>
+      <li><a href="https://ai.rcouyi.com/home" target="_blank">ashuiAI</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>阅读</h2>
+    <ul>
+      <li><a href="https://r.qq.com/" target="_blank">微信读书</a></li>
+      <li><a href="https://dict.eudic.net/" target="_blank">欧路词典</a></li>
+      <li>
+        <a href="https://www.dictionary.com" target="_blank">dictionary</a>
+      </li>
+      <li><a href="https://m.gushiwen.cn/" target="_blank">古诗文</a></li>
+      <li><a href="https://zh.z-library.sk/" target="_blank">zlibrary</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>技术</h2>
+    <ul>
+      <li><a href="https://github.com/" target="_blank">Github</a></li>
+      <li>
+        <a href="https://stackoverflow.com/questions/tagged/javascript" target="_blank">StackOverflow</a>
+      </li>
+      <li>
+        <a href="https://leetcode-cn.com/problemset/all/" target="_blank">力扣</a>
+      </li>
+      <li>
+        <a href="https://time.geekbang.org/" target="_blank">极客时间</a>
+      </li>
+      <li>
+        <a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank">CleanCode</a>
+      </li>
+      <li>
+        <a href="https://github.com/leonardomso/33-js-concepts" target="_blank">33js</a>
+      </li>
+      <li>
+        <a href="https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/#" target="_blank">CS</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>博客</h2>
+    <ul>
+      <li>
+        <a href="https://sive.rs/" target="_blank">dereksives</a>
+      </li>
+      <li>
+        <a href="https://www.nczonline.net/" target="_blank">Nicholas</a>
+      </li>
+      <li>
+        <a href="https://overreacted.io/" target="_blank">overreacted</a>
+      </li>
+      <li>
+        <a href="https://www.robinwieruch.de/blog/" target="_blank">robinwieruch</a>
+      </li>
+      <li>
+        <a href="https://diygod.cc/" target="_blank">diygod</a>
+      </li>
+      <li>
+        <a href="https://hawstein.com/feed.xml" target="_blank">hawstein</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>社区</h2>
+    <ul>
+      <li><a href="https://dev.to/" target="_blank">dev.to</a></li>
+      <li><a href="https://medium.com/" target="_blank">Medium</a></li>
+      <li><a href="https://news.ycombinator.com" target="_blank">hacker news</a></li>
+      <li><a href="https://coolshell.cn" target="_blank">coolshell</a></li>
+      <li><a href="https://www.v2ex.com/" target="_blank">V2ex</a></li>
+      <li><a href="https://juejin.cn/frontend" target="_blank">掘金</a></li>
+      <li>
+        <a href="https://css-tricks.com/" target="_blank">css-tricks</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>开发</h2>
+    <ul>
+      <li><a href="https://devdocs.io/" target="_blank">API</a></li>
+      <li><a href="https://tldr.sh/" target="_blank">TLDR</a></li>
+      <li><a href="https://codesandbox.io/" target="_blank">Editor</a></li>
+      <li>
+        <a href="https://nodejs.org/docs/v12.9.1/api/documentation.html" target="_blank">Node</a>
+      </li>
+      <li><a href="http://vim.rtorr.com/" target="_blank">Vim</a></li>
+      <li><a href="http://regex101.com/" target="_blank">正则工具</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>新闻</h2>
+    <ul>
+      <li>
+        <a href="https://www.zaobao.com.sg/" target="_blank">联合早报</a>
+      </li>
+      <li>
+        <a href="https://www.bbc.com/news/world" target="_blank">BBC</a>
+      </li>
+      <li>
+        <a href="https://japannews.yomiuri.co.jp/" target="_blank">japannews</a>
+      </li>
+      <li>
+        <a href="https://www.thesun.co.uk/" target="_blank">thesun</a>
+      </li>
+      <li>
+        <a href="https://www.thetimes.com/" target="_blank">thetimes</a>
+      </li>
+      <li>
+        <a href="https://www.lemonde.fr/en/" target="_blank">lemonde</a>
+      </li>
+      <li>
+        <a href="https://www.usatoday.com/" target="_blank">usatoday</a>
+      </li>
+      <li>
+        <a href="https://www.nytimes.com/international/" target="_blank">nytimes</a>
+      </li>
+      <li><a href="https://www.inoreader.com" target="_blank">RSS</a></li>
+      <li>
+        <a href="https://www.helsinkitimes.fi/index.php" target="_blank">Helsinki时报</a>
+      </li>
+      <li>
+        <a href="https://www.economist.com/" target="_blank">Economist</a>
+      </li>
+      <li>
+        <a href="https://research.contrary.com/" target="_blank">research</a>
+      </li>
+      <li>
+        <a href="https://calgaryherald.com/" target="_blank">calgaryherald</a>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>社交</h2>
+    <ul>
+      <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+      <li><a href="https://www.douban.com/" target="_blank">Douban</a></li>
+      <li><a href="https://bsky.app/" target="_blank">bluesky</a></li>
+      <li>
+        <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      </li>
+      <li><a href="https://iris.to" target="_blank">nostr</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>娱乐</h2>
+    <ul>
+      <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+      <li><a href="https://www.bilibili.com/" target="_blank">B站</a></li>
+      <li><a href="https://music.youtube.com/" target="_blank">Music</a></li>
+      <li><a href="https://pianyuan.org/" target="_blank">Film</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>生活工具</h2>
+    <ul>
+      <li><a href="https://ai.rcouyi.com" target="_blank">ashuiAI</a></li>
+      <li>
+        <a href="http://biorhythm.bookcell.cn/" target="_blank">生物节律</a>
+      </li>
+      <li><a href="http://blog.bookcell.org/" target="_blank">Blog</a></li>
+      <li><a href="https://app.getpocket.com/" target="_blank">Pocket</a></li>
+      <li>
+        <a href="https://mp.weixin.qq.com/" target="_blank">微信公众号</a>
+      </li>
+      <li>
+        <a href="https://chat.openai.com/chat" target="_blank">chatgpt</a>
+      </li>
+      <li>
+        <a href="https://excalidraw.com/" target="_blank">画图excalidraw</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h2>Creator</h2>
+    <ul>
+      <li>
+        <a href="https://nextjs.org/docs" target="_blank">next.js</a>
+      </li>
+      <li>
+        <a href="https://vercel.com/dashboard" target="_blank">Vercel</a>
+      </li>
+      <li>
+        <a href="https://supabase.com/dashboard/projects" target="_blank">Supabase</a>
+      </li>
+      <li>
+        <a href="https://tailwindcss.com/docs/responsive-design" target="_blank">Tailwindcss</a>
+      </li>
+      <li>
+        <a href="https://react.dev/reference/react" target="_blank">Reactjs</a>
+      </li>
+      <li>
+        <a href="https://www.postgresql.org/docs/current/" target="_blank">PostgreSQL</a>
+      </li>
+      <li><a href="https://app.netlify.com/" target="_blank">Netlify</a></li>
+      <li><a href="https://trello.com/" target="_blank">trello</a></li>
+      <li>
+        <a href="https://sideproject.guide/" target="_blank">SideProject</a>
+      </li>
+      <li><a href="https://stripe.com/" target="_blank">stripe</a></li>
+      <li><a href="https://www.creem.io/" target="_blank">creem</a></li>
+      <li><a href="https://app.apifox.com/" target="_blank">apifox</a></li>
+      <li><a href="https://cloud.digitalocean.com/" target="_blank">digitalocean</a></li>
+      <li><a href="https://buymeacoffee.com/" target="_blank">buymeacoffee</a></li>
+    </ul>
+  </section>
+
+  <div id="mode">模式</div>
+
+  <script>
+    let mode = localStorage.getItem("mode");
+    const modeElement = document.getElementById("mode");
+    document.body.classList.add(mode);
+    modeElement.classList.add(mode);
+
+    modeElement.addEventListener("click", () => {
+      if (mode === "day") {
+        mode = "night";
+      } else {
+        mode = "day";
       }
 
-      .container {
-        width: 90%;
-        margin: 30px auto;
-        text-align: left;
-      }
+      localStorage.setItem("mode", mode);
 
-      header {
-        font-size: 18px;
-        margin-bottom: 20px;
-        color: dodgerblue;
-      }
+      document.body.classList.remove("day");
+      document.body.classList.remove("night");
+      modeElement.classList.remove("day");
+      modeElement.classList.remove("night");
 
-      section {
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-      }
-
-      h2,
-      ul,
-      li {
-        display: inline-block;
-        list-style: none;
-      }
-
-      h2 {
-        font-size: 20px;
-        font-weight: 400;
-        color: #5a8891;
-        line-height: 1.25;
-        flex: 0 0 50px;
-      }
-
-      ul {
-        line-height: 1.6;
-      }
-
-      li {
-        margin-left: 4px;
-        font-size: 16px;
-        line-height: 1.5;
-      }
-
-      a {
-        font-size: 16px;
-        text-decoration: none;
-        color: #7fdbff;
-      }
-
-      a:visited {
-        color: #0074d9;
-      }
-
-      /* 夜晚模式 */
-      body.night {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #eee;
-      }
-
-      body.night header {
-        color: #98ccff;
-      }
-
-      body.night h2 {
-        color: #66d1e6;
-      }
-
-      body.night a {
-        color: #9fd7e2;
-      }
-
-      body.night a:visited {
-        color: #19a7c3;
-      }
-
-      #mode {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        z-index: 99;
-        border: 1px solid #666;
-        text-align: center;
-        line-height: 40px;
-        border-radius: 50%;
-        font-size: 18px;
-      }
-
-      #mode.night {
-        background-color: rgba(0, 0, 0, 0.7);
-        color: #eee;
-      }
-    </style>
-  </head>
-
-  <body class="container">
-    <header>书格导航</header>
-
-    <section>
-      <h2>搜索</h2>
-      <ul>
-        <li><a href="https://www.google.com/" target="_blank">Google</a></li>
-        <li>
-          <a href="https://duckduckgo.com/" target="_blank">Duckduckgo</a>
-        </li>
-        <li><a href="https://www.bing.com/" target="_blank">Bing</a></li>
-        <li><a href="https://0x3.com/" target="_blank">0x3</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>AI</h2>
-      <ul>
-        <li><a href="https://chat.deepseek.com/" target="_blank">Deepseek</a></li>
-        <li>
-          <a href="https://www.doubao.com/chat/" target="_blank">豆包</a>
-        </li>
-        <li><a href="https://ai.rcouyi.com/home" target="_blank">ashuiAI</a></li>
-        <li><a href="https://chatgpt.com/" target="_blank">chatgpt</a></li>
-        <li><a href="https://x.com/i/grok" target="_blank">grok</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>阅读</h2>
-      <ul>
-        <li><a href="https://r.qq.com/" target="_blank">微信读书</a></li>
-        <li><a href="https://dict.eudic.net/" target="_blank">欧路词典</a></li>
-        <li>
-          <a href="https://www.dictionary.com" target="_blank">dictionary</a>
-        </li>
-        <li><a href="https://m.gushiwen.cn/" target="_blank">古诗文</a></li>
-        <li><a href="https://z-library.gs/" target="_blank">zlibrary</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Todo</h2>
-      <ul>
-        <li>
-          <a href="https://indiehackers.com" target="_blank">indiehackers</a>
-          <a href="https://news.ycombinator.com/" target="_blank">hackernews</a>
-          <a href="https://alternativeto.net/" target="_blank">alternativeto</a>
-          <a href="https://www.producthunt.com/" target="_blank">producthunt</a>
-          <a href="https://www.reddit.com/?feed=home" target="_blank">reddit</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>技术</h2>
-      <ul>
-        <li><a href="https://github.com/" target="_blank">Github</a></li>
-        <li>
-          <a
-            href="https://stackoverflow.com/questions/tagged/javascript"
-            target="_blank"
-            >StackOverflow</a
-          >
-        </li>
-        <li>
-          <a href="https://leetcode-cn.com/problemset/all/" target="_blank"
-            >力扣</a
-          >
-        </li>
-        <li>
-          <a href="https://time.geekbang.org/" target="_blank">极客时间</a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/ryanmcdermott/clean-code-javascript"
-            target="_blank"
-            >CleanCode</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/leonardomso/33-js-concepts"
-            target="_blank"
-            >33js</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://csdiy.wiki/CS%E5%AD%A6%E4%B9%A0%E8%A7%84%E5%88%92/#"
-            target="_blank"
-            >CS</a
-          >
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>博客</h2>
-      <ul>
-        <li>
-          <a href="https://sive.rs/" target="_blank">dereksives</a>
-        </li>
-        <li>
-          <a href="https://www.nczonline.net/" target="_blank">Nicholas</a>
-        </li>
-        <li>
-          <a href="https://overreacted.io/" target="_blank">overreacted</a>
-        </li>
-        <li>
-          <a href="https://www.robinwieruch.de/blog/" target="_blank"
-            >robinwieruch</a
-          >
-        </li>
-        <li>
-          <a href="https://diygod.cc/" target="_blank">diygod</a>
-        </li>
-        <li>
-          <a href="https://hawstein.com/feed.xml" target="_blank">hawstein</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>社区</h2>
-      <ul>
-        <li><a href="https://dev.to/" target="_blank">dev.to</a></li>
-        <li><a href="https://medium.com/" target="_blank">Medium</a></li>
-        <li><a href="https://news.ycombinator.com" target="_blank">hacker news</a></li>
-        <li><a href="https://coolshell.cn" target="_blank">coolshell</a></li>
-        <li><a href="https://www.v2ex.com/" target="_blank">V2ex</a></li>
-        <li><a href="https://juejin.cn/frontend" target="_blank">掘金</a></li>
-        <li>
-          <a href="https://css-tricks.com/" target="_blank">css-tricks</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>开发</h2>
-      <ul>
-        <li><a href="https://devdocs.io/" target="_blank">API</a></li>
-        <li><a href="https://tldr.sh/" target="_blank">TLDR</a></li>
-        <li><a href="https://codesandbox.io/" target="_blank">Editor</a></li>
-        <li>
-          <a
-            href="https://nodejs.org/docs/v12.9.1/api/documentation.html"
-            target="_blank"
-            >Node</a
-          >
-        </li>
-        <li><a href="http://vim.rtorr.com/" target="_blank">Vim</a></li>
-        <li><a href="http://regex101.com/" target="_blank">正则工具</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>新闻</h2>
-      <ul>
-        <li>
-          <a href="https://www.zaobao.com.sg/" target="_blank">联合早报</a>
-        </li>
-        <li>
-          <a href="https://www.bbc.com/news/world" target="_blank">BBC</a>
-        </li>
-        <li>
-          <a href="https://japannews.yomiuri.co.jp/" target="_blank">japannews</a>
-        </li>
-        <li>
-          <a href="https://www.thesun.co.uk/" target="_blank">thesun</a>
-        </li>
-        <li>
-          <a href="https://www.thetimes.com/" target="_blank">thetimes</a>
-        </li>
-        <li>
-          <a href="https://www.lemonde.fr/en/" target="_blank">lemonde</a>
-        </li>
-        <li>
-          <a href="https://www.usatoday.com/" target="_blank">usatoday</a>
-        </li>
-        <li>
-          <a href="https://www.nytimes.com/international/" target="_blank">nytimes</a>
-        </li>
-        <li><a href="https://www.inoreader.com" target="_blank">RSS</a></li>
-        <li>
-          <a href="https://www.helsinkitimes.fi/index.php" target="_blank"
-            >Helsinki时报</a
-          >
-        </li>
-        <li>
-          <a href="https://www.economist.com/" target="_blank">Economist</a>
-        </li>
-        <li>
-          <a href="https://research.contrary.com/" target="_blank">research</a>
-        </li>
-        <li>
-          <a href="https://calgaryherald.com/" target="_blank">calgaryherald</a>
-        </li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>社交</h2>
-      <ul>
-        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
-        <li><a href="https://www.douban.com/" target="_blank">Douban</a></li>
-        <li><a href="https://bsky.app/" target="_blank">bluesky</a></li>
-        <li>
-          <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
-        </li>
-        <li><a href="https://iris.to" target="_blank">nostr</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>娱乐</h2>
-      <ul>
-        <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
-        <li><a href="https://www.bilibili.com/" target="_blank">B站</a></li>
-        <li><a href="https://music.youtube.com/" target="_blank">Music</a></li>
-        <li><a href="https://pianyuan.org/" target="_blank">Film</a></li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>生活工具</h2>
-      <ul>
-        <li><a href="https://ai.rcouyi.com" target="_blank">ashuiAI</a></li>
-        <li>
-          <a href="http://biorhythm.bookcell.cn/" target="_blank">生物节律</a>
-        </li>
-        <li><a href="http://blog.bookcell.org/" target="_blank">Blog</a></li>
-        <li><a href="https://app.getpocket.com/" target="_blank">Pocket</a></li>
-        <li>
-          <a href="https://mp.weixin.qq.com/" target="_blank">微信公众号</a>
-        </li>
-        <li>
-          <a href="https://chat.openai.com/chat" target="_blank">chatgpt</a>
-        </li>
-        <li>
-          <a href="https://excalidraw.com/" target="_blank">画图excalidraw</a>
-        </li>
-      </ul>
-    </section>
-    <section>
-      <h2>indiehacker</h2>
-      <ul>
-        <li>
-          <a href="https://vercel.com/dashboard" target="_blank">Vercel</a>
-        </li>
-        <li>
-          <a href="https://supabase.com/dashboard/projects" target="_blank"
-            >Supabase</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://tailwindcss.com/docs/responsive-design"
-            target="_blank"
-            >Tailwindcss</a
-          >
-        </li>
-        <li>
-          <a href="https://react.dev/reference/react" target="_blank"
-            >Reactjs</a
-          >
-        </li>
-        <li>
-          <a href="https://www.postgresql.org/docs/current/" target="_blank"
-            >PostgreSQL</a
-          >
-        </li>
-        <li><a href="https://app.netlify.com/" target="_blank">Netlify</a></li>
-        <li><a href="https://trello.com/" target="_blank">trello</a></li>
-        <li>
-          <a href="https://sideproject.guide/" target="_blank">SideProject</a>
-        </li>
-        <li><a href="https://stripe.com/" target="_blank">stripe</a></li>
-        <li><a href="https://www.creem.io/" target="_blank">creem</a></li>
-        <li><a href="https://dashboard.clerk.com/" target="_blank">clerk</a></li>
-        <li><a href="https://cn.element-plus.org/zh-CN/component/overview.html" target="_blank">element-plus</a></li>
-        <li><a href="https://app.apifox.com/" target="_blank">apifox</a></li>
-        <li><a href="https://cloud.digitalocean.com/" target="_blank">digitalocean</a></li>
-        <li><a href="https://buymeacoffee.com/" target="_blank">buymeacoffee</a></li>
-      </ul>
-    </section>
-
-    <div id="mode">模式</div>
-
-    <script>
-      let mode = localStorage.getItem("mode");
-      const modeElement = document.getElementById("mode");
       document.body.classList.add(mode);
       modeElement.classList.add(mode);
+    });
+  </script>
+</body>
 
-      modeElement.addEventListener("click", () => {
-        if (mode === "day") {
-          mode = "night";
-        } else {
-          mode = "day";
-        }
-
-        localStorage.setItem("mode", mode);
-
-        document.body.classList.remove("day");
-        document.body.classList.remove("night");
-        modeElement.classList.remove("day");
-        modeElement.classList.remove("night");
-
-        document.body.classList.add(mode);
-        modeElement.classList.add(mode);
-      });
-    </script>
-  </body>
 </html>
